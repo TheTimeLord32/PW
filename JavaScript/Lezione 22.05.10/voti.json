@@ -1,0 +1,16 @@
+[
+    {
+        "esame": "Programmazione Web",
+        "voto": "30"
+    },
+
+    {
+        "esame": "Sistemi Operativi",
+        "voto": "30"
+    },
+    
+    {
+        "esame": "Algoritmi e Strutture Dati",
+        "voto": "30"
+    }
+]

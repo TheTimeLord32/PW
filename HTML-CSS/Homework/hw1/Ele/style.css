@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ffffff;
+    font-family: "Hindi", sans-serif;
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Play", sans-serif;
+    color: #c76161;
+}
+a{
+    text-decoration: none;
+    color: #3a7777;
+}
+
+a:hover{
+    color: #f5af33;
+}
+
+header{
+    width: 100%;
+    height: 230px;
+    background-image: url("http://pw.netgroup.uniroma2.it/img/pic2.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.centro_header{
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    background-color: white;
+}
+
+.centro_header div{
+    width: 944px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.centro_header div div{
+    width: 400px;
+    height: 90px;
+    margin: 0 auto;
+    background-image: url(http://pw.netgroup.uniroma2.it/img/bg-logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    text-align: center;
+}
+
+.centro_header div div h1{
+    font-size: 2.2em;
+}
+
+.centro_header div ul{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+}
+
+.centro_header div ul li{
+    display: inline-block;
+    margin: 0 0 0 20px;
+}
+
+main{
+    width: 944px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main h2{
+    clear: both;
+    font-size: 1.4em;
+    padding-bottom:15px;
+    border-bottom: #8888888d 1px solid;
+}
+
+.column1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: #8888888d 1px solid;
+}
+
+.column1 p{
+    width: 50%;
+    color: #f5af33;
+}
+.column1 div{
+    width: 50%;
+    text-align: right;
+}
+
+.column1 div a img{
+    width: 25px;
+    height: 25px;
+}
+
+.column1 h1{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 2em; 
+}
+
+.column1 p img{
+    width: 944px;
+}
+
+.column2{
+    width: 600px;
+    font-weight: bold;
+}
+
+.ingredienti li{
+    width: 300px;
+    font-size: 1.1em;
+    text-transform: lowercase;
+    background: url(http://pw.netgroup.uniroma2.it/img/dot.png) no-repeat left center;
+    list-style: none;
+    float: left;
+    padding: 15px;
+}
+
+.preparazione_ricetta > p{
+    padding-bottom: 20px;
+}
+
+.commenti{
+    list-style: none;
+}
+
+.commenti li p{
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 20px;
+}
+
+.c{
+    padding: 25px 15px;
+    color: #3d3257;
+    background-color: #f8f6f9;
+}
+
+.r{
+    margin: 0 25px;
+}
+
+.r_text{
+    padding: 25px 15px;
+    color: #ffffff;
+    background-color: #c76161;
+}
+
+main aside{
+    width: 300px;
+}
+
+main aside img{
+    margin: 20px 0;
+}
+
+main aside h2{
+    font-size: 1.2em;
+}
+
+main aside ul li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main aside ul li img{
+    width: 40%;
+    border: #c76161 2px solid; 
+}
+
+main aside ul li a{
+    width: 60%;
+    padding: 0 15px;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: #171717;
+    color: #f1f1f1;
+}
+
+footer div{
+    width: 944px;
+    margin: 50px auto;
+}
+
+.column {
+    width: 33.3333%;
+    float: left;
+}
+
+.column ul {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+footer h3{
+    color: #f5af33;
+    font-size: 1.2em;
+    padding: 20px 0;
+}
+
+.newsletter{
+    clear: both;
+    border-top: #f1f1f1 1px solid;
+    border-bottom: #f1f1f1 1px solid;
+    margin-bottom: 0;
+    padding: 20px 0 30px 0;
+}
+
+.newsletter h4{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.end{
+    margin-top: 5px;
+    display: flex;
+}
+
+.end p{
+    width: 100%;
+    margin: 15px 0;
+    order: 1;
+}
+
+.end a{
+    order: 2;
+}
