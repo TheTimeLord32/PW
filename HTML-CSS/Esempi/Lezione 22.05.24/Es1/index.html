@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof Github</title>
+    <style>
+        .my-image{
+            position: fixed;
+            top: 60px;
+            right: 60px;
+            width: 300px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prof su Github</h1>
+    <section>
+        <button onclick="getInfo2('loreti')">Loreti</button>
+        <button onclick="getInfo2('bracciale')">Bracciale</button>
+        <button onclick="getInfo2('salsano')">Salsano</button>
+        <button onclick="getInfo2('detti')">Detti</button>
+    </section>
+    <script>
+        const getInfo = function(docente) {
+            const url_doc = `http://pw.netgroup.uniroma2.it/docenti/${docente}.json`;
+            console.log(url_doc);
+            fetch(url_doc)
+                .then(res => res.json())
+                .then(json_obj => {
+                    const url_user = `https://api.github.com/users/${json_obj.name}`;
+                    return fetch(url_user);
+                })
+                .then(res => res.json())
+                .then(usr_info => {
+                    //console.log(usr_info.avatar_url);
+                    const img = document.createElement('img');
+                    img.src = usr_info.avatar_url;
+                    img.classList.add("my-image");
+                    document.body.append(img);
+                    img.addEventListener('load', ()=> {
+                        setTimeout(()=> img.remove(), 5000);
+                    })
+                })
+                .catch(err => alert(err));
+        }
+
+        const getInfo2 = async function(docente) {
+            try {
+                const url_doc = await fetch(`http://pw.netgroup.uniroma2.it/docenti/${docente}.json`);
+                console.log(url_doc);
+
+                let data = await url_doc.json();
+                console.log(data);
+
+                let url_user = await fetch(`https://api.github.com/users/${data.name}`);
+                console.log(url_user);
+
+                let usr_info = await url_user.json();
+                console.log(usr_info);
+
+                const img = document.createElement('img');
+                img.src = usr_info.avatar_url;
+                img.classList.add("my-image");
+                document.body.append(img);
+                img.addEventListener('load', ()=> {
+                    setTimeout(()=> img.remove(), 5000);
+                })
+            } catch (error) {
+                alert(error);
+            }
+        }
+    </script>
+</body>
+</html>
