@@ -1,0 +1,19 @@
+{
+  "name": "lezione-22.05.30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "es1.js",
+  "scripts": {
+    "start2": "node es2.js",
+    "startDev": "nodemon es2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "upper-case": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
