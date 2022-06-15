@@ -1,0 +1,69 @@
+header{
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+footer{
+    border: 1px solid grey;
+}
+
+menu p{
+    font-size: large;
+    font-weight: bold;
+    padding-inline-start: 0px;
+}
+
+menu, menu ul {
+    padding-inline-start: 0px;
+}
+
+/* regole con viewport MINORE 1000px */
+@media screen and (max-width: 1000px) {
+    body {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .columns{
+        width: 100%;
+    }
+
+    menu ul li{
+        margin: auto;
+        display: block;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: flex-start;
+        padding-inline-start: 0px;
+    }
+
+    menu p{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .hidden{
+        display: none;
+    }
+}
+
+/* regole con viewport ALMENO 1000px */
+@media screen and (min-width: 1000px) {
+    body {
+        max-width: 900px;
+        margin: auto;
+    }
+    
+    .columns {
+        display: flex;
+        width: 100%;
+    }
+
+    menu ul li{
+        max-width: 900px;
+        margin: auto;
+        display: inline-block;
+        border: 1px solid grey;
+    }
+}

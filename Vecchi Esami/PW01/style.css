@@ -1,0 +1,16 @@
+/* stile con schermo minore di 1000 */
+@media screen and (max-width: 1000px) {
+    body {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+/* stile con schermo maggiore di 1000 */
+@media screen and (min-width: 1000px) {
+    body {
+        max-width: 900px;
+        margin: auto;
+    }
+}
+

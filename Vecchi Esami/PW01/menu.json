@@ -1,0 +1,18 @@
+[
+    {
+        "desc": "Home Page",
+        "link": "https://www.example.com/"
+    },
+    {
+        "desc": "Informazioni",
+        "link": "https://www.example.com/info"
+    },
+    {
+        "desc": "Prodotti",
+        "link": "https://www.example.com/prodotti"
+    },
+    {
+        "desc": "Contatti",
+        "link": "https://www.example.com/contatti"
+    }
+]
