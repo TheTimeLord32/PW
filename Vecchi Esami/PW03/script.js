@@ -7,7 +7,7 @@ window.onload = () => {
 };
 
 function whole(){
-	fetch("lista.json")
+	fetch("http://localhost:8081/data")
 	.then(response => response.json())
 	.then(json_obj => {
 		let main = document.querySelector(".main").appendChild(document.createElement("pre"));
@@ -16,7 +16,7 @@ function whole(){
 }
 
 function convert(){
-	fetch("lista.json")
+	fetch("http://localhost:8081/data")
 	.then(response => response.json())
 	.then(json_obj => {
 		let main = document.querySelector(".main");
