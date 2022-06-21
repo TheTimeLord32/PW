@@ -1,0 +1,39 @@
+body{
+	margin: 20px 0 20px 0;
+	padding: 0;
+	width: 400px;
+	align-items: center;
+}
+
+header h1, footer p {
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+header, footer {
+	background-color: #f1f1f1;
+}
+
+header, main, footer {
+	border: 1px solid;
+}
+
+/*
+main height 80% viewport height
+*/
+
+@media screen and (min-width: 600px) {
+	body{
+		width: 500px;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	body{
+		width: 800px;
+		margin: auto;
+	}
+}
+
+/* fix margin */
