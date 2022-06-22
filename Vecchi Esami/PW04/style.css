@@ -18,6 +18,13 @@ header, main, footer {
 	border: 1px solid;
 }
 
+div {
+	height: 20px;
+	width: 20px;
+	float: left;	
+	clear: both;
+}
+
 /*
 main height 80% viewport height
 */
