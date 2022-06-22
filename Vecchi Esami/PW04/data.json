@@ -1,28 +1,28 @@
 [
 	{
 		"colore": "#FF0080",
-		"pos_orizzontale": "10",
-		"pos_verticale": "30"
+		"pos_x": "10",
+		"pos_y": "30"
 	},
 	{
 		"colore": "#800080",
-		"pos_orizzontale": "30",
-		"pos_verticale": "40"
+		"pos_x": "30",
+		"pos_y": "40"
 	},
 	{
 		"colore": "#808000",
-		"pos_orizzontale": "50",
-		"pos_verticale": "50"
+		"pos_x": "50",
+		"pos_y": "50"
 	},
 	{
 		"colore": "#408080",
-		"pos_orizzontale": "60",
-		"pos_verticale": "60"
+		"pos_x": "60",
+		"pos_y": "60"
 	},
 	{
 		"colore": "#C0C0C0",
-		"pos_orizzontale": "30",
-		"pos_verticale": "50"
+		"pos_x": "30",
+		"pos_y": "50"
 	}
 	
 ]
