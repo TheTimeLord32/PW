@@ -30,5 +30,9 @@ function fetchData(){
 				console.log("Div eliminato");
 			});
 		}
+	})
+	.catch(err => {
+		alert("Errore: " + err);
+		console.log("Errore: " + err);
 	});
 }
