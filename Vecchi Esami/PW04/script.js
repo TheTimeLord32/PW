@@ -14,17 +14,16 @@ function fetchData(){
 		
 		for(let i = 0; i < array.length; i++){
 			let div = main.appendChild(document.createElement("div"));
-			let p = div.appendChild(document.createElement("p"));
-			
+				
 			console.log("Titolo premuto");
 			console.log("Data ", i, ": ", array[i]);
 				
-			p.style.backgroundColor = array[i].colore;
-			p.style.width = "10vh";
-			p.style.height = "10vh";
-			p.style.position = "relative";
-			p.style.left = array[i].pos_x + "vh";
-			p.style.top = array[i].pos_y + "vh";
+			div.style.backgroundColor = array[i].colore;
+			div.style.width = "10vh";
+			div.style.height = "10vh";
+			div.style.position = "absolute";
+			div.style.left = array[i].pos_x + "%";
+			div.style.top = array[i].pos_y + "%";
 
 			div.addEventListener("click", () => {
 				main.removeChild(div);
