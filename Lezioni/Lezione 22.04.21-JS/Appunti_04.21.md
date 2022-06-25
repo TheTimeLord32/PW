@@ -4,8 +4,7 @@
 const prefix = '06';    //read only
 a = 5                   // non uso let/var, dichiarazione implicita
 NaN = true;             // non produce errore ma non ha senso
-```
-```js
+
 "use strict";           // rende i codice superiore un errore
 ```
 - Da mettere prima del resto del codice
@@ -27,8 +26,8 @@ Sono funzioni utili all'interno del browser, metodi oggetto window
 ```js
 var a = "5";
 var b = 5;
-alert (a == b); // true
-alert (a === b); // false
+alert (a == b);     // true
+alert (a === b);    // false
 ```
 ### Variabili _truthy_ e _falsy_
 - `false`: false, 0, "", null, undefined, NaN

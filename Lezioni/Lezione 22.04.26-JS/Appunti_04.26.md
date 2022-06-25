@@ -13,7 +13,7 @@ console.log(studente.nome);     // Undefined
 ### Copiare oggetto
 ```js
 let a = {"nome" : "pippo"};
-leb b = a;
+let b = a;
 ```
 A e B sono riferimenti allo stesso oggetto:
 - Copiando A in B, copiamo il riferimento
@@ -139,7 +139,7 @@ color.forEach(function(color) {
 });
 
 // join
-color.join(" "); // red green blue
+color.join(" ");        // red green blue
 
 //search
 color.indexOf("green"); // 1

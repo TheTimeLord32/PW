@@ -46,16 +46,16 @@ JS Garbage Collection: rimuove le variabili che automaticamente non sono più ut
 
 # Variabili
 - `let nome = valore;` (possibile omissione del valore, non inizialiazzata)
-- `myVar = myNumber` (variabili di tipologia diverse, assegnazione invariata)
+- `myVar = myNumber;` (variabili di tipologia diverse, assegnazione invariata)
 
 <br>
 Ogni dato ha un tipo: non serve specificarlo nella dichiarazione ma esistono quelli primitivi e complessi
 
 ```js
-let test = 5; //Operazioni: + - * / % **
-let test = "ciao"; //Stringa, singoli o doppi apici; Operazione: concatenazione con +
+let test = 5; 		//Operazioni: + - * / % **
+let test = "ciao"; 	//Stringa, singoli o doppi apici; Operazione: concatenazione con +
 let test = 'ciao'; 
-let test = true; //Booleana, true o false; Operazione: ! (inverso)
+let test = true; 	//Booleana, true o false; Operazione: ! (inverso)
 let test;
 let test = null;
 ```
