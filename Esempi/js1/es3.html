@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" class="my-form">
+      <input type="text" class="inp-txt" size="50" />
+      <input type="submit" value="Add" />
+    </form>
+    <h2>Lista Dinamica</h2>
+    <ul class="dyn-list"></ul>
+    <script>
+      const form = document.querySelector(".my-form");
+      const txt = document.querySelector(".inp-txt");
+      const dynList = document.querySelector(".dyn-list");
+
+      const formAction = function (e) {
+        e.preventDefault();
+        const newEl = document.createElement("li");
+        newEl.innerText = txt.value;
+        dynList.append(newEl);
+        dynList.addEventListener("click", (ev) => ev.target.remove());
+        txt.value = "";
+      };
+      form.addEventListener("submit", formAction);
+    </script>
+  </body>
+</html>

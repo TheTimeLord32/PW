@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span class="menu-ctrl">Hide/Show Menu</span>
+      <ul class="dyn-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contacts</li>
+      </ul>
+    </nav>
+    <script>
+      const menu = document.querySelector(".menu-ctrl");
+      const mylist = document.querySelector(".dyn-menu");
+
+      const actionMenu = function (e) {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.parentNode);
+        console.log(this);
+        /*if (mylist.style.display == "none") mylist.style.display = "block";
+        else mylist.style.display = "none";*/
+        mylist.classList.toggle("hidden");
+      };
+
+      menu.addEventListener("click", actionMenu);
+    </script>
+  </body>
+</html>

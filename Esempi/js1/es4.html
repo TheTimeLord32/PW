@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mymodal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        transform: translate(-50%, -50%);
+        background-color: antiquewhite;
+        padding: 20px;
+        z-index: 100;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .spanclose {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header><button class="btn-show">Show Modal</button></header>
+    <h1>Pagina con Modale</h1>
+    <section>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum enim
+        veritatis fugiat laborum natus explicabo modi earum qui facere itaque
+        autem, nemo recusandae. Aperiam laboriosam tenetur perferendis
+        recusandae consectetur velit dolorem! Libero quae dicta labore, incidunt
+        qui vero eos blanditiis laboriosam quam eligendi voluptatem voluptates
+        assumenda, architecto quos. Accusamus, nam.
+      </p>
+      <p>
+        Ipsam reiciendis cum inventore amet laudantium pariatur consequuntur
+        temporibus beatae voluptas, nobis ut sequi non asperiores ea molestias
+        error dolores soluta maiores quisquam perspiciatis sed tempora. Ducimus
+        dicta nisi, minima dolor, aut obcaecati nostrum sequi excepturi
+        reiciendis exercitationem quo aliquid a eveniet numquam velit
+        repudiandae enim perspiciatis fuga magni porro.
+      </p>
+      <p>
+        Fuga quia quae itaque eligendi atque obcaecati eos nisi, architecto
+        mollitia ad? Corporis harum fugiat repellat, facilis quasi eligendi, aut
+        odio, nostrum saepe totam soluta in. Delectus et, dolore culpa animi,
+        veritatis esse, alias eaque rerum tenetur ad incidunt repellat unde sed?
+        Sequi ut neque, rem necessitatibus fugit earum repudiandae?
+      </p>
+    </section>
+    <div class="mymodal hidden">
+      <span class="spanclose">[X]</span>
+      <h2>Testo del Modale</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+        consectetur accusamus vitae quis delectus modi deserunt neque, quos
+        consequatur officiis tempora, distinctio impedit doloremque facere ex!
+        Nostrum in similique quibusdam?
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script>
+      const mybtn = document.querySelector(".btn-show");
+      const mymodal = document.querySelector(".mymodal");
+      const overlay = document.querySelector(".overlay");
+      const spanclose = document.querySelector(".spanclose");
+
+      const closeModal = function (e) {
+        mymodal.classList.add("hidden");
+        overlay.classList.add("hidden");
+      };
+
+      const showModal = function (e) {
+        mymodal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      };
+
+      spanclose.addEventListener("click", closeModal);
+      mybtn.addEventListener("click", showModal);
+    </script>
+  </body>
+</html>

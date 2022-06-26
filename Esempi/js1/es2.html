@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .txt-red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Sezioni Dinamiche</h1>
+    <section>
+      <h2 class="click-sec">Sezione 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet
+        quae ipsum a ipsa cumque. Eaque, totam. Doloremque dolorem tempore
+        accusamus ad sed? Tempora rerum, labore in atque reprehenderit fugiat
+        quasi tempore ipsam praesentium aut laborum adipisci, aspernatur
+        recusandae voluptatibus?
+      </p>
+    </section>
+    <section>
+      <h2 class="click-sec">Sezione 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet
+        quae ipsum a ipsa cumque. Eaque, totam. Doloremque dolorem tempore
+        accusamus ad sed? Tempora rerum, labore in atque reprehenderit fugiat
+        quasi tempore ipsam praesentium aut laborum adipisci, aspernatur
+        recusandae voluptatibus?
+      </p>
+    </section>
+    <section>
+      <h2 class="click-sec">Sezione 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet
+        quae ipsum a ipsa cumque. Eaque, totam. Doloremque dolorem tempore
+        accusamus ad sed? Tempora rerum, labore in atque reprehenderit fugiat
+        quasi tempore ipsam praesentium aut laborum adipisci, aspernatur
+        recusandae voluptatibus?
+      </p>
+    </section>
+    <script>
+      const sections = document.querySelectorAll(".click-sec");
+
+      const colorElement = function (ev) {
+        console.log(ev.target.nextElementSibling);
+        ev.target.nextElementSibling.classList.toggle("txt-red");
+      };
+      sections.forEach((el) => el.addEventListener("click", colorElement));
+    </script>
+  </body>
+</html>

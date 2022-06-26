@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*setTimeout(() => {
+        console.log("Dopo 1 sec");
+        setTimeout(() => {
+          console.log("Dopo 2 sec");
+          setTimeout(() => {
+            console.log("Dopo 3 sec");
+            setTimeout(() => {
+              console.log("Dopo 4 sec");
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);*/
+
+      const wait = function (sec) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(resolve, sec * 1000);
+        });
+      };
+
+      wait(1)
+        .then(() => {
+          console.log("Dopo 1 sec");
+          return wait(1);
+        })
+        .then(() => {
+          console.log("Dopo 2 sec");
+          return wait(1);
+        })
+        .then(() => {
+          console.log("Dopo 3 sec");
+          return wait(1);
+        })
+        .then(() => {
+          console.log("Dopo 4 sec");
+        });
+    </script>
+  </body>
+</html>

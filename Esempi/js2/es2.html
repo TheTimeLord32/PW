@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Start");
+      setTimeout(() => {
+        console.log("Timer 0");
+      }, 0);
+      Promise.resolve("Resolved Promise").then((res) => console.log(res));
+      Promise.resolve("Resolved Promise 2").then((res) => {
+        console.log(res);
+        for (let index = 0; index < 10000000000; index++) {}
+      });
+      console.log("Stop");
+    </script>
+  </body>
+</html>
