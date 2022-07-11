@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 800px;
+    margin:0 auto;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    background-color: #022B3A;
+    font-family: "Franklin Gothic Medium", "Arial Narrow";
+}
+a{
+    color:#1f7a8c;
+}
+header{
+    width:100%;
+    text-align:center;
+    order:1;
+    }
+header>h1{
+    font-size:32px;
+    text-align: left;
+}
+nav{
+    width:15%;
+    order:2;
+}
+nav ul {
+    padding: 0 10px;
+}
+nav ul li{
+    text-align:right;
+    list-style-type:none;
+}
+main{
+    width:55%;
+    order:3;
+}
+aside{
+    width:30%;
+    padding-left: 20px;
+    order:4;
+}
+nav, main, aside{
+    border: 1px solid #022B3A;
+    border-top: 3px solid #022B3A;
+    border-bottom: 3px solid #022B3A;
+}
+footer{
+    width:100%;
+    height: 150px;
+    order:5;
+}
+.overlay{
+    position: fixed;
+    background-color: #ffffff;
+    border: 1px solid #022B3A;
+    right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cambia_colore{
+    width: 100%;
+    
+}
+.cambia_configurazioneA{
+    width: 50%;
+}
+
+.cambia_configurazioneB{
+    width: 50%;
+}
+@media (max-width: 800px){
+    .wrapper{
+        width: 400px;
+        }
+    nav, main, aside{
+        width: 100%;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    nav ul li{
+        width:25%;
+    }
+}
