@@ -1,69 +1,49 @@
-header{
-    border: 1px solid grey;
-    font-weight: bold;
-    font-size: xx-large;
+nav ul {
+	padding: 0 10px;
 }
 
-footer{
-    border: 1px solid grey;
+nav ul li {
+	text-align: left;
+	list-style-type: none;
+	border: 1px solid grey;
+	padding:0 10px;
 }
 
-menu p{
-    font-size: large;
-    font-weight: bold;
-    padding-inline-start: 0px;
+.hidden{
+	display: none;
 }
 
-menu, menu ul {
-    padding-inline-start: 0px;
-}
-
-/* regole con viewport MINORE 1000px */
+/* stile con schermo minore di 1000 */
 @media screen and (max-width: 1000px) {
-    body {
-        max-width: 400px;
-        margin: auto;
-    }
+	body {
+		max-width: 400px;
+		margin: auto;
+	}
 
-    .columns{
-        width: 100%;
-    }
+	.main div{
+		width: 100%;
+	}
 
-    menu ul li{
-        margin: auto;
-        display: block;
-        border: 1px solid grey;
-        display: flex;
-        justify-content: flex-start;
-        padding-inline-start: 0px;
-    }
-
-    menu p{
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .hidden{
-        display: none;
-    }
 }
 
-/* regole con viewport ALMENO 1000px */
+/* stile con schermo maggiore di 1000 */
 @media screen and (min-width: 1000px) {
-    body {
-        max-width: 900px;
-        margin: auto;
-    }
-    
-    .columns {
-        display: flex;
-        width: 100%;
-    }
+	body {
+		max-width: 900px;
+		margin: auto;
+	}
 
-    menu ul li{
-        max-width: 900px;
-        margin: auto;
-        display: inline-block;
-        border: 1px solid grey;
-    }
+	nav ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.main div {
+		width: 33%;
+	}
 }

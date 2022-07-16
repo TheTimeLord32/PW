@@ -30,6 +30,8 @@ body {
 	background-color: antiquewhite;
 	border-color: var(--background);
 	grid-column: 2/3;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 header h1 {

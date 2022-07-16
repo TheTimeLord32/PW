@@ -10,11 +10,11 @@ window.onload = () => {
 
 	/* let confA = document.querySelector(".confA");
 	console.log(confA);
-	confA.addEventListener("click", configA);
+	confA.addEventListener("click", configA);*/
 
 	let confB = document.querySelector(".confB");
 	console.log(confB);
-	confB.addEventListener("click", configB); */
+	confB.addEventListener("click", configB);
 };
 
 function changeColor() {
@@ -58,7 +58,8 @@ function configA() {
 
 function configB() {
 	let header = document.querySelector("header");
-	setInterval(() => {
-		header.style.alignItems = "center";
+	header.style.textAlign = "center";
+	setTimeout(() => {
+		header.style.textAlign = "left";
 	}, 3000);
 }

@@ -1,0 +1,18 @@
+[
+	{
+		"desc": "Home page", 
+		"link": "index.html"
+	},
+	{
+		"desc": "Informazioni", 
+		"link": "index.html"
+	},
+	{
+		"desc": "Prodotti", 
+		"link": "index.html"
+	},
+	{
+		"desc": "Contatti", 
+		"link": "index.html"
+	}
+]

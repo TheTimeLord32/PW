@@ -1,17 +1,18 @@
 "use strict";
 
 window.onload = () => {
-	whole();
-	let btnConvert = document.querySelector(".btnConvert");
-	btnConvert.addEventListener("click", convert);
+	fetchData();
+	let btn = document.querySelector("button");
+	btn.addEventListener("click", convert);
 };
 
-function whole(){
+function fetchData(){
 	fetch("http://localhost:8081/data")
 	.then(response => response.json())
 	.then(json_obj => {
-		let main = document.querySelector(".main").appendChild(document.createElement("pre"));
-		main.innerHTML = JSON.stringify(json_obj, null, 2);
+		let main = document.querySelector(".main").appendChild(document.createElement("pre"))
+		for (let i = 0; i < json_obj.length; i++) 
+		main.innerHTML = JSON.stringify(json_obj, null, 2)
 	});
 }
 
@@ -28,5 +29,6 @@ function convert(){
 		}
 	});
 	let footer = document.querySelector(".footer");
+	console.log(footer);
 	footer.removeChild(footer.firstChild);
 }

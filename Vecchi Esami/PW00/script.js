@@ -1,44 +1,48 @@
 "use strict";
 
-function shuffle(array) { 
-    array.sort(() => Math.random() - 0.5); 
-} 
+window.onload = () => {
+	fetchData();
+	chiudi();
+	casuale();
+};
 
-let arr = [1, 2, 3]; 
+function fetchData(){
+	fetch("data.json")
+	.then(response => response.json())
+	.then(json_obj => {
+		for (let i = 0; i < json_obj.length; i++) {
+			let main = document.querySelector(".main").appendChild(document.createElement("div")); 
+			main.style.zIndex= i+1
+			let h2 = main.appendChild(document.createElement("h2"))
+			h2.innerHTML = json_obj[i].titolo;
+			let p = main.appendChild(document.createElement("p"))
+			p.innerHTML = json_obj[i].contenuto;
+		}
+	});
+}
+
+function chiudi(){
+	let menu = document.querySelector(".menu");
+	let nav = document.querySelector("nav");
+	menu.addEventListener('click', ()=> {
+		if (window.innerWidth < 1000)
+			nav.classList.toggle("hidden");
+	});
+}
+
+/* 
+function shuffle(array) {
+	array.sort(()=> Math.random() - 0.5);
+}
+let arr = [1, 2, 3];
 shuffle(arr);
 
-function menu(){
-    const menu = document.querySelector(".menu");
-    const menuList = document.querySelector(".menu-list");
-    console.log(menu);
-    if (window.innerWidth < 1000) {
-        menuList.classList.add(".hidden");
-        const actionMenu = function(e) {
-            console.log(e);
-            menuList.classList.toggle('hidden');
-        };
-        menu.addEventListener('click', actionMenu);
-    } else if(window.innerWidth >= 1000) {
-        menuList.classList.remove('hidden');
-    }
-
+function casuale() {
+	let articoli = document.querySelector(".articoli");
+	let main = document.querySelector(".main");
+	articoli.addEventListener('click', ()=>{
+		let div = document.querySelector("div");
+		div.style.zIndex = 0
+	});
 }
-
-function input(){
-    fetch("input.json")
-    .then(response => response.json())
-    .then(json_obj => {
-        for (let i = 0; i < json_obj.length; i++) {
-            let sezione = document.querySelector(".columns").appendChild(document.createElement("section"));
-            let titolo = sezione.appendChild(document.createElement("h2"));
-            let par = sezione.appendChild(document.createElement("p"));
-            
-            titolo.innerHTML = json_obj[i].titolo;
-            par.innerHTML = json_obj[i].contenuto;
-        }
-    });
-}
-
-input();
-menu();
-
+ */
