@@ -4,16 +4,12 @@ window.onload = () => {
 	let overlay = document.querySelector(".overlay");
 	let cambiaColori = overlay.childNodes[1].childNodes[1].childNodes[0];
 
-	// let cambiaColori = document.querySelector(".cambiaColori");
-	console.log(cambiaColori);
 	cambiaColori.addEventListener("click", changeColor);
 
-	/* let confA = document.querySelector(".confA");
-	console.log(confA);
-	confA.addEventListener("click", configA);*/
+	let confA = document.querySelector(".confA");
+	confA.addEventListener("click", configA);
 
 	let confB = document.querySelector(".confB");
-	console.log(confB);
 	confB.addEventListener("click", configB);
 };
 
@@ -25,9 +21,9 @@ function changeColor() {
 		let a = document.querySelectorAll("a");
 		
 		body.style.backgroundColor = json_obj.background;
-		a.style.color = json_obj.link; }
-		// border change
-
+		// a.style.color = json_obj.link; 
+		body.style.borderColor = json_obj.border;
+	}
 	)
 	.catch(err => {
 		alert("Errore: " + err);
@@ -57,7 +53,7 @@ function configA() {
 }
 
 function configB() {
-	let header = document.querySelector("header");
+	const header = document.querySelector("h1");
 	header.style.textAlign = "center";
 	setTimeout(() => {
 		header.style.textAlign = "left";

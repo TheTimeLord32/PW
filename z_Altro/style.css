@@ -1,0 +1,91 @@
+/* stile con schermo minore di 1000 AKA mobile first*/
+@media screen and (max-width: 1000px) {
+	body {
+		max-width: 400px;
+		margin: auto;
+	}
+
+	.navbar {
+		width: 100%;
+		margin: 2.5% 0;
+		border: 1px solid black;
+		order: 2;
+	}
+
+	.navbar ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.navbar ul li{
+		list-style-type: none;
+		padding: 0 10px;
+	}
+	
+	.main {
+		width: 100%;
+		margin: 2.5% 0;
+		border: 1px solid black;
+		order: 3;
+	}
+	
+	.footer {
+		width: 100%;
+		margin: 2.5% 0;
+		border: 1px solid black;
+		order: 4;
+	}
+
+}
+
+/* stile con schermo maggiore di 1000 AKA deskop first*/
+@media screen and (min-width: 1000px) {
+	body {
+		max-width: 900px;
+		margin: auto;
+	}
+	
+	.navbar {
+		float: left;
+		width: 22%;
+		margin: 0 0 0 2.5%;
+		border: 1px solid black;
+		order: 2;
+	}
+
+	.navbar ul {
+		display: block;
+	}
+
+	.navbar ul li{
+		list-style-type: none;
+	}
+	
+	.main {
+		float: left;
+		width: 45%;
+		margin: 0 2.5%;
+		border: 1px solid black;
+		order: 3;
+	}
+	
+	.footer {
+		float: left;
+		width: 22%;
+		margin: 0 2.5% 0 0;
+		border: 1px solid black;
+		order: 4;
+	}
+}
+
+.overlay{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: 2px solid black;
+	background-color: white;
+}
+
+.header{
+	position: relative;
+}
